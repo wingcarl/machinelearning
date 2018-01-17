@@ -1,0 +1,24 @@
+import kNN
+>>> kNN.classify0([0,0],group,labels,3)
+
+Traceback (most recent call last):
+  File "<pyshell#2>", line 1, in <module>
+    kNN.classify0([0,0],group,labels,3)
+NameError: name 'group' is not defined
+>>> group,labels = kNN.createDataSet()
+>>> group
+array([[1. , 1.1],
+       [1. , 1. ],
+       [0. , 0. ],
+       [0. , 0.1]])
+>>> kNN.classify0([0,0],group,labels,3)
+
+Traceback (most recent call last):
+  File "<pyshell#5>", line 1, in <module>
+    kNN.classify0([0,0],group,labels,3)
+  File "E:\machinelearning\mlLib\kNN.py", line 12, in classify0
+    diffMat = tile(inX,(dataSize,1)) - dataSet
+NameError: global name 'dataSize' is not defined
+>>> import kNN
+>>> group,labels = kNN.createDataSet()
+>>> kNN.classify0([0,0],group,labels,3)
