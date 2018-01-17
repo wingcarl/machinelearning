@@ -1,4 +1,4 @@
-# -*- coding: cp936 -*-
+# -*- coding:utf-8 -*- 
 from numpy import *
 import operator
 
@@ -11,7 +11,7 @@ def classify0(inX, dataSet, labels, k):
     dataSetSize = dataSet.shape[0]
     diffMat = tile(inX,(dataSetSize,1)) - dataSet
     sqDiffMat = diffMat**2
-    sqDistances = sqDiffMat.sum(axis=1)  #自身相加
+    sqDistances = sqDiffMat.sum(axis=1)  #鑷韩鐩稿姞
     distances = sqDistances**0.5
     sortedDistIndicies = distances.argsort()
     classCount = {}
